@@ -39,7 +39,8 @@ public class MainActivity extends ActionBarActivity {
             startActivity(intent);
         }
         if (id == R.id.action_map) {
-
+            //do nothing ForecastFragment will send intent to GoogleMapActivity
+            //doing it here also would start GoogleMapActivity two times
         }
         return super.onOptionsItemSelected(item);
     }
