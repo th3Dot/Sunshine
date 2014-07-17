@@ -47,6 +47,7 @@ public class ForecastFragment extends Fragment {
         super.onCreate(savedInstanceState);
         //this fragment handles menu events
         setHasOptionsMenu(true);
+        //call helper method to get new weather data using city id
         updateWeather();
     }
 
