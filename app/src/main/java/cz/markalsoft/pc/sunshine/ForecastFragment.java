@@ -172,10 +172,10 @@ public class ForecastFragment extends Fragment {
             }
             long roundedHigh = Math.round(high);
             long roundedLow = Math.round(low);
+
             String highLowStr;
-
-
             highLowStr = roundedHigh + "/" + roundedLow;
+
             return highLowStr;
         }
 
