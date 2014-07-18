@@ -30,6 +30,8 @@ local.properties
 *.ipr
 *.iws
 
+build/
+
 # Other build files
 project.properties
 ant.properties
