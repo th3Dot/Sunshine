@@ -21,16 +21,20 @@ public class GoogleMapActivity extends ActionBarActivity {
 
         }
 
+        //Getting fragment reference from SupportFragmentManager, resp reference for SupportMapFragment
         GoogleMap mMap = ((SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map)).getMap();
+        //mounting OnMapClickListener
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
-
+                //handling request from startActivityForResult
                 Intent result = new Intent(GoogleMapActivity.this, ForecastFragment.class);
                 result.putExtra("latitude", latLng.latitude);
                 result.putExtra("longitude", latLng.longitude);
+                //adding result here with setResult
                 setResult(Activity.RESULT_OK, result);
+                //need to call finish to end activity and return the result
                 finish();
             }
         });

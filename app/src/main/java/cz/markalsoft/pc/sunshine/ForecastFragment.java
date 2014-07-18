@@ -33,7 +33,6 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 /**
  * Created by PC on 16.7.2014.
@@ -74,9 +73,8 @@ public class ForecastFragment extends Fragment {
     private void updateWeather() {
 
         FetchWeatherTask weatherTask = new FetchWeatherTask();
-        String prefLocationKey = getString(R.string.pref_location_key);
         weatherTask.execute(getActivity().getPreferences(Context.MODE_PRIVATE)
-                .getString(prefLocationKey, getString(R.string.pref_location_default)));
+                .getString(getString(R.string.pref_location_key), getString(R.string.pref_location_default)));
 
     }
 
@@ -107,8 +105,7 @@ public class ForecastFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 
-        List<String> fakeData;
-        //ArrayAdapter for forecast list view, it process raw data from fakeData and
+        //ArrayAdapter for forecast list view, it process raw data and
         //creates list item layouts based on that data which then it sends to
         //ListView listViewForecast
 
@@ -120,7 +117,8 @@ public class ForecastFragment extends Fragment {
                 R.layout.list_item_forecast,
                 //id of list item
                 R.id.list_item_forecast_textview,
-                //raw data to display in ListView
+                //raw data to display in ListView, no data to display on start
+                //sending empty arraylist
                 new ArrayList<String>());
         //finding reference to ListView using findViewById, try to call to the closest
         //container in hierarchy in order to reduce the search space, in this example it is
