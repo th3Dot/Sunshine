@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="C:\Users\PC\AndroidStudioProjects\Sunshine\app\build\intermediates\pre-dexed\debug\classes-cbee7e72958cbd6839b4a371ef38ba64a3b33045.jar"
+        jar="C:\Users\PC\AndroidStudioProjects\Sunshine\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
+        dex="C:\Users\PC\AndroidStudioProjects\Sunshine\app\build\intermediates\pre-dexed\debug\classes-5513c825974727706ac87537abac1edaea8d5501.jar"
+        jar="C:\Users\PC\AndroidStudioProjects\Sunshine\build\intermediates\exploded-aar\com.google.android.gms\play-services\5.0.77\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="b6a82434c1eca686607867cd906bcc80ed987837"/>
+    <item
+        dex="C:\Users\PC\AndroidStudioProjects\Sunshine\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-8d15d73cacb91427e6f54fc3a1e1f8bc92ec1102.jar"
+        jar="C:\Program Files (x86)\Android\Android Studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+
+</pre-dex-items>
