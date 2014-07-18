@@ -31,9 +31,13 @@ local.properties
 *.iws
 
 build/
+.idea/
+.gradle/
 
 # Other build files
 project.properties
 ant.properties
 build.xml
 proguard-project.txt
+local.properties
+*.iml
