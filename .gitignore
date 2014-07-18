@@ -1,43 +1,59 @@
+# OS
 .DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
 
-# Local sandbox
-_sandbox
-
-# built application files
-*.apk
-*.ap_
-
-# files for the dex VM
-*.dex
-
-# Java class files
+# compiled 
+*.com
 *.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
 
-# generated files
-out/
-bin/
-gen/
+# package
+*.apk
+*.iso
+*.ipa
+*.jar
+*.war
 
-# Local configuration file (sdk path, etc)
-local.properties
+# xcode
+*.swp
+*~.nib
+build/
+*.pbxuser
+*.perspective
+*.perspectivev3
+xcuserdata
 
-# Eclipse project files
+# eclipse
 .classpath
 .project
+.settings
 
-# IDEA files
-*.iml
-*.ipr
-*.iws
-
-build/
+#android
+bin
+gen
+*.apk
+*.ap_
+*.dex
+.build/
 .idea/
-.gradle/
 
-# Other build files
-project.properties
-ant.properties
-build.xml
-proguard-project.txt
-local.properties
-*.iml
+# logs
+*.log
+
+# RoR
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+
+# .Net & Visual Studio
+_ReSharper.*
+*.resharper
+*.resharper.user
+*.csproj.user
