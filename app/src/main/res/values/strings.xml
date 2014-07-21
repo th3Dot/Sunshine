@@ -21,5 +21,6 @@
     <string name="title_activity_google_map">GoogleMapActivity</string>
     <string name="action_map">Choose location</string>
     <string name="action_map_show">Show on map</string>
+    <string name="action_share">Share</string>
 
 </resources>
