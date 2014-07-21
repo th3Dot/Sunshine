@@ -42,6 +42,8 @@ gen
 *.dex
 .build/
 .idea/
+.gradle
+
 
 # logs
 *.log
