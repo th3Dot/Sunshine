@@ -6,6 +6,10 @@
         android:title="@string/action_map"
         android:orderInCategory="90"
         app:showAsAction="never" />
+    <item android:id="@+id/action_map_show"
+        android:title="@string/action_map_show"
+        android:orderInCategory="95"
+        app:showAsAction="never" />
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
         android:orderInCategory="100"

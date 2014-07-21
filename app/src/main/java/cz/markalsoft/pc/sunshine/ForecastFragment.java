@@ -1,7 +1,6 @@
 package cz.markalsoft.pc.sunshine;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -73,7 +72,7 @@ public class ForecastFragment extends Fragment {
     private void updateWeather() {
 
         FetchWeatherTask weatherTask = new FetchWeatherTask();
-        weatherTask.execute(getActivity().getPreferences(Context.MODE_PRIVATE)
+        weatherTask.execute(PreferenceManager.getDefaultSharedPreferences(getActivity())
                 .getString(getString(R.string.pref_location_key), getString(R.string.pref_location_default)));
 
     }
@@ -260,11 +259,12 @@ public class ForecastFragment extends Fragment {
                 if (params.length == 1) {
                     //Creates url based on postcode user defined
                     builtUri = Uri.parse("http://api.openweathermap.org/data/2.5/forecast/daily?").buildUpon()
-                            .appendQueryParameter("id", params[0])
+                            .appendQueryParameter("q", params[0])
                             .appendQueryParameter("mode", "json")
                             .appendQueryParameter("units", "metric")
                             .appendQueryParameter("cnt", "7")
                             .build();
+                    Log.v(LOG_TAG,builtUri.toString());
                 } else if (params.length == 2) {
                     //Creates url based on postcode user defined
                     builtUri = Uri.parse("http://api.openweathermap.org/data/2.5/forecast/daily?").buildUpon()

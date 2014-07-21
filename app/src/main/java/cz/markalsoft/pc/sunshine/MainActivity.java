@@ -1,7 +1,9 @@
 package cz.markalsoft.pc.sunshine;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,6 +43,18 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_map) {
             //do nothing ForecastFragment will send intent to GoogleMapActivity
             //doing it here also would start GoogleMapActivity two times
+        }
+        if (id == R.id.action_map_show) {
+            //start implicit intent to show user's default location on google map
+            String location;
+            location = PreferenceManager.getDefaultSharedPreferences(this)
+                    .getString(getString(R.string.pref_location_key),getString(R.string.pref_location_default));
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            Uri uri = Uri.parse("geo:0.0?").buildUpon().appendQueryParameter("q",location).build();
+            intent.setData(uri);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
         }
         return super.onOptionsItemSelected(item);
     }
