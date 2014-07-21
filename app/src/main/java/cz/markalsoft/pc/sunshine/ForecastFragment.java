@@ -119,6 +119,7 @@ public class ForecastFragment extends Fragment {
                 //raw data to display in ListView, no data to display on start
                 //sending empty arraylist
                 new ArrayList<String>());
+        
         //finding reference to ListView using findViewById, try to call to the closest
         //container in hierarchy in order to reduce the search space, in this example it is
         //root view, this is the view of this Fragment, where listView is defined
